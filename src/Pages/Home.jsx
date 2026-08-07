@@ -45,8 +45,16 @@ const TechStack = memo(({ tech }) => (
   </div>
 ));
 
-const CTAButton = memo(({ href, text, icon: Icon }) => (
-  <a href={href}>
+const CTAButton = memo(({ href, text, icon: Icon }) => {
+  const scrollToSection = (e) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      window.scrollTo({ top: section.offsetTop - 100, behavior: "smooth" });
+    }
+  };
+  return (
+  <a href={href} onClick={scrollToSection}>
     <button className="group relative w-[160px]">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#4f52c9] to-[#8644c5] rounded-xl opacity-50 blur-md group-hover:opacity-90 transition-all duration-700"></div>
       <div className="relative h-11 bg-[#030014] backdrop-blur-xl rounded-lg border border-white/10 leading-none overflow-hidden">
@@ -60,7 +68,8 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
       </div>
     </button>
   </a>
-));
+  );
+});
 
 const SocialLink = memo(({ icon: Icon, link, label }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" aria-label={label}>
@@ -229,7 +238,7 @@ const Home = () => {
                     isHovering ? "scale-105" : "scale-100"
                   }`}>
                     <img
-                      src={`${import.meta.env.BASE_URL}Animation1.gif`}
+                      src={`${import.meta.env.BASE_URL}Animation1.webp`}
                       alt="Developer Animation"
                       className={`w-full h-full object-contain transition-all duration-500 ${
                         isHovering 

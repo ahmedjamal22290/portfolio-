@@ -259,7 +259,15 @@ const AboutPage = () => {
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
               </button>
               </a>
-              <a href="#Portofolio" className="w-full lg:w-auto">
+              <a
+                href="#Portofolio"
+                className="w-full lg:w-auto"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.querySelector("#Portofolio");
+                  if (section) window.scrollTo({ top: section.offsetTop - 100, behavior: "smooth" });
+                }}
+              >
               <button 
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -274,7 +282,14 @@ const AboutPage = () => {
           <ProfileImage />
         </div>
 
-        <a href="#Portofolio">
+        <a
+          href="#Portofolio"
+          onClick={(e) => {
+            e.preventDefault();
+            const section = document.querySelector("#Portofolio");
+            if (section) window.scrollTo({ top: section.offsetTop - 100, behavior: "smooth" });
+          }}
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
             {statsData.map((stat) => (
               <StatCard key={stat.label} {...stat} />

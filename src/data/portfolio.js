@@ -109,7 +109,7 @@ export const projects = [
     Title: "Isco App",
     Description:
       "Production e-commerce & QR-based asset management app. Combines full shopping workflows — product browsing, filtering, cart, secure checkout, order tracking and wishlists — using WooCommerce REST APIs, with QR-based asset maintenance management.",
-    Img: asset("/Animation1.gif"),
+    Img: asset("/Animation1.webp"),
     Logo: asset("/isco/logo.webp"),
     Play: "https://play.google.com/store/apps/details?id=com.mmj.iscoksa",
     AppStore: "https://apps.apple.com/app/iscoksa/id6775752920",
@@ -129,7 +129,7 @@ export const projects = [
     Title: "Booking App",
     Description:
       "Cross-platform hotel booking app (Android & iOS) with Firebase authentication, real-time Firestore search, favorites management and dark mode via GetStorage persistent preferences. Dynamic hotel browsing workflows with responsive mobile UI/UX.",
-    Img: asset("/Animation1.gif"),
+    Img: asset("/Animation1.webp"),
     Play: "",
     AppStore: "",
     Github: "https://github.com/ahmedjamal22290/Booking_App",
