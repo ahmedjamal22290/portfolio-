@@ -4,6 +4,8 @@
 //  For images: drop files into /public and reference as "/name.png"
 // ============================================================
 
+export const asset = (path) => import.meta.env.BASE_URL + path.replace(/^\//, "");
+
 export const profile = {
   name: "Ahmed Jamal",
   firstName: "Ahmed",
@@ -17,7 +19,7 @@ export const profile = {
   email: "ahmedjamal22290@gmail.com",
   phone: "+20 1004995172",
   location: "Egypt",
-  resume: "/Ahmed_Jamal_Flutter_Developer_CV2.pdf",
+  resume: asset("/Ahmed_Jamal_Flutter_Developer_CV2.pdf"),
   website: "https://github.com/ahmedjamal22290",
   linkedin: "https://linkedin.com/in/ahmedbenjamal",
   github: "https://github.com/ahmedjamal22290",
@@ -67,8 +69,8 @@ export const projects = [
     Title: "Cura24h",
     Description:
       "Production marketplace app connecting buyers & service providers. Features a multi-role architecture (Buyer, Seller, Admin), streamlined onboarding with social authentication, OTP verification and secure JWT-based auth. Complete booking workflow including scheduling, Stripe payments, refunds, cancellations and live order tracking, plus real-time buyer–seller chat.",
-    Img: "/Coding.gif",
-    Logo: "/cura24h/logo.webp",
+    Img: asset("/Coding.gif"),
+    Logo: asset("/cura24h/logo.webp"),
     Play: "https://play.google.com/store/apps/details?id=com.cura.cura24h",
     AppStore: "https://apps.apple.com/eg/app/cura24h/id6759921818",
     Github: "Private",
@@ -87,8 +89,8 @@ export const projects = [
     Title: "Cura24h Seller",
     Description:
       "Companion vendor-management platform enabling sellers to manage services, orders, subscriptions, payouts, and business analytics. Includes advanced service management with media uploads, dynamic pricing, scheduling, availability control and category management.",
-    Img: "/Coding.gif",
-    Logo: "/cura24h_seller/logo.webp",
+    Img: asset("/Coding.gif"),
+    Logo: asset("/cura24h_seller/logo.webp"),
     Play: "https://play.google.com/store/apps/details?id=com.cara.cura24h_seller",
     AppStore: "https://apps.apple.com/eg/app/cura24h-seller/id6759921987",
     Github: "Private",
@@ -107,8 +109,8 @@ export const projects = [
     Title: "Isco App",
     Description:
       "Production e-commerce & QR-based asset management app. Combines full shopping workflows — product browsing, filtering, cart, secure checkout, order tracking and wishlists — using WooCommerce REST APIs, with QR-based asset maintenance management.",
-    Img: "/Animation1.gif",
-    Logo: "/isco/logo.webp",
+    Img: asset("/Animation1.gif"),
+    Logo: asset("/isco/logo.webp"),
     Play: "https://play.google.com/store/apps/details?id=com.mmj.iscoksa",
     AppStore: "https://apps.apple.com/app/iscoksa/id6775752920",
     Github: "Private",
@@ -127,7 +129,7 @@ export const projects = [
     Title: "Booking App",
     Description:
       "Cross-platform hotel booking app (Android & iOS) with Firebase authentication, real-time Firestore search, favorites management and dark mode via GetStorage persistent preferences. Dynamic hotel browsing workflows with responsive mobile UI/UX.",
-    Img: "/Animation1.gif",
+    Img: asset("/Animation1.gif"),
     Play: "",
     AppStore: "",
     Github: "https://github.com/ahmedjamal22290/Booking_App",
@@ -144,7 +146,7 @@ export const projects = [
     Title: "Bookly App",
     Description:
       "Book-browsing app using the Google Books API with MVVM architecture, dependency injection via get_it, and go_router navigation. Featured books carousel, full-text search, star ratings and reading preview with robust error handling.",
-    Img: "/Coding.gif",
+    Img: asset("/Coding.gif"),
     Play: "",
     AppStore: "",
     Github: "https://github.com/ahmedjamal22290/bookly_app",
@@ -159,8 +161,8 @@ export const projects = [
 ];
 
 export const certificates = [
-  { id: 1, Title: "Complete Flutter & Dart Development Course.", Img: "/cert/Complete-Flutter-Dart-Development-Course.jpg" },
-  { id: 2, Title: "MVVM Course Cirtification", Img: "/cert/mvvm-course.jpg" },
+  { id: 1, Title: "Complete Flutter & Dart Development Course.", Img: asset("/cert/Complete-Flutter-Dart-Development-Course.jpg") },
+  { id: 2, Title: "MVVM Course Cirtification", Img: asset("/cert/mvvm-course.jpg") },
 ];
 
 export const techStack = [
