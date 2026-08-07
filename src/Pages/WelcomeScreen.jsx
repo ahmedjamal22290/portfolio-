@@ -9,18 +9,18 @@ const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
   
   useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index <= text.length) {
-        setDisplayText(text.slice(0, index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 70);
-    
-    return () => clearInterval(timer);
-  }, [text]);
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: false,
+  });
+
+  const timer = setTimeout(() => {
+    onLoadingComplete?.();
+  }, 1600);
+
+  return () => clearTimeout(timer);
+}, [onLoadingComplete]);
 
   return (
     <span className="inline-block">
